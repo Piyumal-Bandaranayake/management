@@ -7,7 +7,6 @@ import {
   LayoutDashboard,
   Users,
   Briefcase,
-  CheckSquare,
   Globe,
   Receipt,
   DollarSign,
@@ -49,7 +48,6 @@ const navigationSections: NavSection[] = [
     items: [
       { title: "Clients", href: "/clients", icon: Users },
       { title: "Projects", href: "/projects", icon: Briefcase },
-      { title: "Tasks & Sprints", href: "/projects/tasks", icon: CheckSquare },
     ],
   },
   {

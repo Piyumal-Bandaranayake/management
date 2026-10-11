@@ -39,7 +39,7 @@ export function ProjectTableWrapper({ initialProjects, clients }: ProjectTableWr
             Project Operations Hub
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Track web design deliverables, sprint timelines, contractor allocations, and margins.
+            Track web design deliverables, timelines, contractor allocations, and margins.
           </p>
         </div>
         <Button

@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import {
   Layers,
-  CheckSquare,
   Users,
   Globe,
   Receipt,
@@ -26,7 +25,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ProjectProfitCard } from "@/components/projects/project-profit-card"
 import { AssignmentDialog } from "@/components/projects/assignment-dialog"
-import { ProjectTasksTab } from "@/components/projects/project-tasks-tab"
 import { removeAssignmentAction } from "@/actions/projects.actions"
 import { formatCurrency, formatDate } from "@/lib/utils"
 import { toast } from "sonner"
@@ -70,44 +68,40 @@ export function ProjectDetailTabs({ project, teamMembers }: ProjectDetailTabsPro
         currency={project.currency}
       />
 
-      {/* Operational 9-Tab Navigation */}
+      {/* Operational 8-Tab Navigation */}
       <Tabs defaultValue="overview" className="space-y-6">
         <TabsList className="bg-muted/60 p-1 flex-wrap h-auto gap-1">
           <TabsTrigger value="overview" className="text-xs gap-1.5 py-1.5">
             <Layers className="h-3.5 w-3.5" />
             <span>1. Overview</span>
           </TabsTrigger>
-          <TabsTrigger value="tasks" className="text-xs gap-1.5 py-1.5">
-            <CheckSquare className="h-3.5 w-3.5" />
-            <span>2. Tasks</span>
-          </TabsTrigger>
           <TabsTrigger value="team" className="text-xs gap-1.5 py-1.5">
             <Users className="h-3.5 w-3.5" />
-            <span>3. Team ({assignments.length})</span>
+            <span>2. Team ({assignments.length})</span>
           </TabsTrigger>
           <TabsTrigger value="hosting" className="text-xs gap-1.5 py-1.5">
             <Globe className="h-3.5 w-3.5" />
-            <span>4. Hosting & Domain</span>
+            <span>3. Hosting & Domain</span>
           </TabsTrigger>
           <TabsTrigger value="invoices" className="text-xs gap-1.5 py-1.5">
             <Receipt className="h-3.5 w-3.5" />
-            <span>5. Invoices</span>
+            <span>4. Invoices</span>
           </TabsTrigger>
           <TabsTrigger value="payments" className="text-xs gap-1.5 py-1.5">
             <CreditCard className="h-3.5 w-3.5" />
-            <span>6. Payments</span>
+            <span>5. Payments</span>
           </TabsTrigger>
           <TabsTrigger value="expenses" className="text-xs gap-1.5 py-1.5">
             <DollarSign className="h-3.5 w-3.5" />
-            <span>7. Expenses</span>
+            <span>6. Expenses</span>
           </TabsTrigger>
           <TabsTrigger value="files" className="text-xs gap-1.5 py-1.5">
             <FolderArchive className="h-3.5 w-3.5" />
-            <span>8. Files</span>
+            <span>7. Files</span>
           </TabsTrigger>
           <TabsTrigger value="activity" className="text-xs gap-1.5 py-1.5">
             <History className="h-3.5 w-3.5" />
-            <span>9. Activity</span>
+            <span>8. Activity</span>
           </TabsTrigger>
         </TabsList>
 
@@ -197,12 +191,7 @@ export function ProjectDetailTabs({ project, teamMembers }: ProjectDetailTabsPro
           </div>
         </TabsContent>
 
-        {/* Tab 2: Tasks & Sprint Kanban */}
-        <TabsContent value="tasks">
-          <ProjectTasksTab project={project} teamMembers={teamMembers} />
-        </TabsContent>
-
-        {/* Tab 3: Team Assignments (Payroll & Commitments) */}
+        {/* Tab 2: Team Assignments (Payroll & Commitments) */}
         <TabsContent value="team" className="space-y-4">
           <div className="flex items-center justify-between">
             <div>

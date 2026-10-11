@@ -5,7 +5,7 @@ import { ProjectTableWrapper } from "@/components/projects/project-table-wrapper
 
 export const metadata = {
   title: "Projects — AgencyFlow",
-  description: "Manage client development projects, milestones, sprints, and contractor profitability",
+  description: "Manage client development projects and contractor profitability",
 }
 
 export default async function ProjectsPage() {

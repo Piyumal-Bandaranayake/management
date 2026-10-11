@@ -60,7 +60,7 @@ export function ProjectStatHeader({ projects }: ProjectStatHeaderProps) {
             {inProgressProjects}
           </div>
           <p className="text-xs text-muted-foreground mt-1">
-            Active engineering sprints
+            Active in progress
           </p>
         </CardContent>
       </Card>
