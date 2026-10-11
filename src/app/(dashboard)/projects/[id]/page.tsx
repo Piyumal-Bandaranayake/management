@@ -117,7 +117,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </div>
       </div>
 
-      {/* 9 Operational Tabs */}
+      {/* 8 Operational Tabs */}
       <ProjectDetailTabs project={project} teamMembers={teamMembers} />
     </div>
   )
